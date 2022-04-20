@@ -38,7 +38,59 @@
 	</div>
 	<!-- Player Registration -->
 	<div class="results home default-box hide">
+		<h1 class="home">Resultados del Juego</h1>
+		<table>
+			<tr>
+				<td>Total preguntas</td>
+				<td><span class="total-questions"></span></td>
+			</tr>
+			<tr>
+				<td>Intentos</td>
+				<td><span class="total-attempts"></span></td>
+			</tr>
+			<tr>
+				<td>Ganancias</td>
+				<td><span class="total-profits"></span></td>
+			</tr>
+			<tr>
+				<td>Aciertos</td>
+				<td><span class="total-score"></span></td>
+			</tr>
+		</table>
+		<button type="button"  onclick="returnToHome()">Inicio</button>
+		<button type="button"  onclick="topFive()">Score</button>	
     </div>
+	<!-- TOP -->
+	<div class="top home default-box hide">
+		<h1 class="home">Score</h1>
+		<table>
+			<tr>
+				<td>Nombre</td>
+				<td>Acumulado</td>
+			</tr>
+			<tr>
+				<td><span id="topUsers" class="topUsers "></span></td>
+				<td><span id="topPrizes" class="hide"></span></td>
+			</tr>
+			<tr>
+				<td><span id="topUsers1" class="hide"></span></td>
+				<td><span id="topPrize1" class="hide"></span></td>
+			</tr>
+			<tr>
+				<td><span id="topUsers2" class="hide"></span></td>
+				<td><span id="topPrize2" class="hide"></span></td>
+			</tr>
+			<tr>
+				<td><span id="topUsers3" class="hide"></span></td>
+				<td><span id="topPrize3" class="hide"></span></td>
+			</tr>
+			<tr>
+				<td><span id="topUsers4" class="hide"></span></td>
+				<td><span id="topPrize4" class="hide"></span></td>
+			</tr>
+		</table>
+		
+	</div>
 	<!-- Footer -->
     <div style="color: rgb(132, 138, 135); text-align: center;" >
         Footer
