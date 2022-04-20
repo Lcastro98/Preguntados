@@ -55,3 +55,32 @@ const quiz1 = [{
     options:["Suave", "Rígido", "Sólido", "Transparente"],
     answer: 2
 }]
+
+/**
+ * Level 3 questions
+ */
+ const quiz3 = [{
+    question:"¿Qué usamos para diluir los colores de las acuarelas?",
+    options:["Agua", "Aceite", "Varsol", "Thinner"],
+    answer: 0
+},
+{
+    question:"¿Cuál de estos pintores hace pinturas con forma geométricas?",
+    options:["Leonardo da Vinci", "Salvador Dalí", "Pablo Picasso", "Vicent van Gogh"],
+    answer: 2
+},
+{
+    question:"¿Qué parte del cuerpo se cortó Vicent Van Gogh?",
+    options:["Labios", "Mano", "Nariz", "Oreja"],
+    answer: 3
+},
+{
+    question:"¿Qué país es el que ha ganado más mundiales?",
+    options:["Italia", "Rusia", "Brasil", "Argentina"],
+    answer: 2
+},
+{
+    question:"¿Qué significan las siglas ADN?",
+    options:["Ácido deoxicólico", "Ácido ribonucleico", "Ácido desmineralizante", "Ácido desoxirribonucleico"],
+    answer: 3
+}]
