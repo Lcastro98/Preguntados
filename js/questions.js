@@ -113,3 +113,32 @@ const quiz1 = [{
     options:["200 km/s", "300.000 km/s", "38.000 km/s", "100.000 km/s"],
     answer: 1
 }]
+
+/**
+ * Level 5 questions
+ */
+ const quiz5 = [{
+    question:"¿En qué ciudad se entrevistaron Hitler y Franco?",
+    options:["Hendaya", "Lyon", "Niza", "Marsella"],
+    answer: 0
+},
+{
+    question:"¿Qué ciencia estudia la sangre?",
+    options:["La anatomía", "La hematología", "La neurociencia", "La hemología"],
+    answer: 1
+},
+{
+    question:"¿Cuál fue la primera película de Disney?",
+    options:["Dumbo", "Fantasía", "Blancanieves", "Pinocho"],
+    answer: 2
+},
+{
+    question:"¿Cuál fue la primera película en ganar el Óscar a \"Mejor película\"?",
+    options:["Sin novedad en el frente", "¡Qué verde era mi valle!", "Un americano en París", "Alas"],
+    answer: 3
+},
+{
+    question:"¿Cuántos jugadores hay en un equipo de voleibol?",
+    options:["6", "2", "11", "5"],
+    answer: 0
+}]
