@@ -84,3 +84,32 @@ const quiz1 = [{
     options:["Ácido deoxicólico", "Ácido ribonucleico", "Ácido desmineralizante", "Ácido desoxirribonucleico"],
     answer: 3
 }]
+
+/**
+ * Level 4 questions
+ */
+ const quiz4 = [{
+    question:"¿Cuál es el elemento más abundante de la Tierra?",
+    options:["Hidrógeno", "Oxigeno", "Helio", "Litio"],
+    answer: 0
+},
+{
+    question:"¿Cómo se llama el protagonista de la saga de videojuegos \"La Leyenda de Zelda\"?",
+    options:["Zelda", "Navi", "Impa", "Link"],
+    answer: 3
+},
+{
+    question:"¿Dónde se inventó el Ping-Pong?",
+    options:["China", "Inglaterra", "Alemania", "Perú"],
+    answer: 1
+},
+{
+    question:"¿Cuántos elementos tiene la tabla periódica?",
+    options:["118", "350", "50", "101"],
+    answer: 0
+},
+{
+    question:"¿Cuál es la velocidad de la luz?",
+    options:["200 km/s", "300.000 km/s", "38.000 km/s", "100.000 km/s"],
+    answer: 1
+}]
