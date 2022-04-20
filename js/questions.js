@@ -26,3 +26,32 @@ const quiz1 = [{
     options:["Silla", "Corbata", "Bolso", "Guitarra"],
     answer: 3
 }]
+
+/**
+ * Level 2 questions
+ */
+ const quiz2 = [{
+    question:"¿De qué país son nativos los canguros?",
+    options:["Perú", "Kenia", "Australia", "Irlanda"],
+    answer: 2
+},
+{
+    question:"¿Cuántos años tiene un siglo?",
+    options:["10 años", "100 años", "1000 años", "1 año"],
+    answer: 1
+},
+{
+    question:"¿Cuántos lados iguales tiene un triangulo isósceles?",
+    options:["2", "3", "0", "4"],
+    answer: 0
+},
+{
+    question:"¿Cuál de los siguientes es un continente?",
+    options:["Alemania", "Europa", "Medellín", "Qatar"],
+    answer: 1
+},
+{
+    question:"¿Cuál de los siguientes es un estado de la materia?",
+    options:["Suave", "Rígido", "Sólido", "Transparente"],
+    answer: 2
+}]
