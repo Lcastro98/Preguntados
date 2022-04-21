@@ -310,3 +310,17 @@ button {
    button:active {
 	--border-width: 5px;
    }
+/*Footer estilos*/
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #83a4d4;
+    height: auto;
+    width: 100vw;
+    padding-top: 10px;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+   
