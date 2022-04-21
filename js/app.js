@@ -318,7 +318,6 @@ closeCanvas = () => {
   canvas.y = 0;
 };
 
-
 randomRange = (min, max) => Math.random() * (max - min) + min;
 
 initConfetti = () => {
