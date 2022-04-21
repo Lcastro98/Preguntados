@@ -88,7 +88,7 @@ const quiz1 = [{
 /**
  * Level 4 questions
  */
- const quiz4 = [{
+const quiz4 = [{
     question:"¿Cuál es el elemento más abundante de la Tierra?",
     options:["Hidrógeno", "Oxigeno", "Helio", "Litio"],
     answer: 0
