@@ -305,11 +305,20 @@ const colors = [
 
 //-----------Functions--------------
 resizeCanvas = () => {
-  canvas.width = window.innerWidth;
+	canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
   cx = ctx.canvas.width / 2;
   cy = ctx.canvas.height / 2;
 };
+
+// resize to 0
+closeCanvas = () => {
+  canvas.width = 0;
+  canvas.height = 0;
+  canvas.x = 0;
+  canvas.y = 0;
+};
+
 
 randomRange = (min, max) => Math.random() * (max - min) + min;
 
@@ -373,12 +382,15 @@ render = () => {
 
     // Reset transform matrix
     ctx.setTransform(1, 0, 0, 1, 0, 0);
+
+
   });
 
   // Fire off another round of confetti
-  if (confetti.length <= 10) initConfetti();
+  //if (confetti.length <= 10) initConfetti();
 
   window.requestAnimationFrame(render);
+
 };
 
 //---------Execution--------
@@ -390,6 +402,6 @@ window.addEventListener('resize', function () {
 });
 
 //------------Click------------
-window.addEventListener('click', function () {
-  initConfetti();
-});
+//window.addEventListener('click', function () {
+//  initConfetti();
+//});
