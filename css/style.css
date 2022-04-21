@@ -312,7 +312,8 @@ footer{
 }
 /*Confeti*/
 .confetti{
-	width: 100%;
+	width: 800px;
+	height: 100px;
 	margin: 0 auto;
 	border: 0;
 	user-select: none;

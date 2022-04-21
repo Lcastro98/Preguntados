@@ -383,8 +383,10 @@ render = () => {
 });
 
 window.requestAnimationFrame(render);
+
 };
+
 //----------Resize----------
 window.addEventListener('resize', function () {
-resizeCanvas();
+  resizeCanvas();
 });
