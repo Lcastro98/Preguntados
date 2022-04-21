@@ -171,7 +171,7 @@ function returnToHome(){
 // FINALIZA EL JUEGO AL DAR CLICK EN LA PREGUNTA ERRONEA
 function gameOver(){
 	if(wrongAnswer === 1){
-		swal("Oops! Pregunta Incorrecta, intenta de nuevo", "error");
+		swal("Oops! Pregunta Incorrecta, intenta de nuevo");
 		rightAnswer = 0;
 		quota = 200000;
 		wrongAnswer = 0;
