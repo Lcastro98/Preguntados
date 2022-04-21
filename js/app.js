@@ -171,6 +171,7 @@ function gameOver(){
 	if(wrongAnswer === 1){
 		rightAnswer = 0;
 		quota = 200000;
+		swal("Oops! Pregunta Incorrecta, intenta de nuevo", "error");
 		giveUp();
 		wrongAnswer = 0;
 		questionCounter=0;
