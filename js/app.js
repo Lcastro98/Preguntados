@@ -164,11 +164,13 @@ function returnToHome(){
 	homeBox.classList.remove("hide");
 	questionCounter = 0;
 	rightAnswer=0;	
+	level=1;
 }
 // FINALIZA EL JUEGO AL DAR CLICK EN LA PREGUNTA ERRONEA
 function gameOver(){
 	if(wrongAnswer === 1){
-		quota = 0;
+		rightAnswer = 0;
+		quota = 200000;
 		giveUp();
 		wrongAnswer = 0;
 		questionCounter=0;
@@ -238,34 +240,32 @@ function startQuiz(){
 
 // Push the available questions in the array
 function levelUp(){
+	console.log(level);
+	const category = level1.length;
+	availableQuestion = [];
 	switch(level){
 		case 1:
-			const category1 = quiz1.length;
-			for(let i=0;i<category1;i++){
+			for(let i=0;i<category;i++){
 				availableQuestion.push(level1[i]);
 				}
 			break;
 		case 2:
-			const category2 = quiz1.length;
-			for(let i=0;i<category2;i++){
+			for(let i=0;i<category;i++){
 				availableQuestion.push(level2[i]);
 			}
 			break;
 		case 3:
-			const category3 = quiz1.length;
-			for(let i=0;i<category3;i++){
+			for(let i=0;i<category;i++){
 				availableQuestion.push(level3[i]);
 				}
 			break;
 		case 4:
-			const category4 = quiz1.length;
-			for(let i=0;i<category4;i++){
+			for(let i=0;i<category;i++){
 				availableQuestion.push(level4[i]);
 				}
 			break;
 		case 5:
-			const category5 = quiz1.length;
-			for(let i=0;i<category5;i++){
+			for(let i=0;i<category;i++){
 				availableQuestion.push(level5[i]);
 				}
 			break;
