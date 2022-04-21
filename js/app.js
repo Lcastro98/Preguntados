@@ -41,7 +41,7 @@ function getNewQuestion(){
 	questionText.innerHTML = actualQuestion.question;
 	// Get array index position
 	const index1 = availableQuestion.indexOf(questionIndex);
-	// Remove the indes question from the available questions array, the question will not be repeated
+	// Remove the index question from the available questions array, the question will not be repeated
 	availableQuestion.splice(index1,1);
 	const optLen = actualQuestion.options.length
 	// Push the options in the available questions array.
@@ -79,13 +79,14 @@ function getResult(element){
 		rightAnswer++;
 		level++;
 		levelUp();
+
 	}
 	else{	
 		//  Change to red the wrong option and put a check mark
 		element.classList.add("wrong");
 		updateAnswerIndicator("wrong");
 		wrongAnswer++;
-		setTimeout('giveUp()',1000);
+		// setTimeout('gameOver()',1000);
 	}
 	gameOver();
 	stopClick();	
@@ -140,10 +141,11 @@ function quizResult(){
 	wrongAnswer=0;
 }
 
-// FUNCION PARA EL BOTON DE RENDIRSE
+// BOTON DE RENDIRSE
 function giveUp(){
 	quizBox.classList.add("hide");
 	resultBox.classList.remove("hide");
+	savePrize();
 	quizResult();
 }
 
@@ -155,19 +157,20 @@ function returnToHome(){
 		names = [];
 		prizes = [];
 	}else{attemps++;}
-	// OCULTA EL RESULTADO DE LA CAJA
 	resultBox.classList.add("hide");
 	// OCULTA EL TOP FIVE
 	topResults.classList.add("hide");
-	// MUESTRA LA CAJA DE PREGUNTAS
+	// CAJA DE PREGUNTAS
 	homeBox.classList.remove("hide");
 	questionCounter = 0;
 	rightAnswer=0;	
+	level=1;
 }
-// FINALIZA EL JUEGO AL DAR CLICK EN LA TERCERA PREGUNTA ERRONEA
+// FINALIZA EL JUEGO AL DAR CLICK EN LA PREGUNTA ERRONEA
 function gameOver(){
-	if(wrongAnswer === 3){
-		quota = 0;
+	if(wrongAnswer === 1){
+		rightAnswer = 0;
+		quota = 200000;
 		giveUp();
 		wrongAnswer = 0;
 		questionCounter=0;
@@ -237,34 +240,32 @@ function startQuiz(){
 
 // Push the available questions in the array
 function levelUp(){
+	console.log(level);
+	const category = level1.length;
+	availableQuestion = [];
 	switch(level){
 		case 1:
-			const category1 = quiz1.length;
-			for(let i=0;i<category1;i++){
+			for(let i=0;i<category;i++){
 				availableQuestion.push(level1[i]);
 				}
 			break;
 		case 2:
-			const category2 = quiz2.length;
-			for(let i=0;i<category2;i++){
+			for(let i=0;i<category;i++){
 				availableQuestion.push(level2[i]);
 			}
 			break;
 		case 3:
-			const category3 = quiz3.length;
-			for(let i=0;i<category3;i++){
+			for(let i=0;i<category;i++){
 				availableQuestion.push(level3[i]);
 				}
 			break;
 		case 4:
-			const category4 = quiz4.length;
-			for(let i=0;i<category4;i++){
+			for(let i=0;i<category;i++){
 				availableQuestion.push(level4[i]);
 				}
 			break;
 		case 5:
-			const category5 = quiz5.length;
-			for(let i=0;i<category5;i++){
+			for(let i=0;i<category;i++){
 				availableQuestion.push(level5[i]);
 				}
 			break;

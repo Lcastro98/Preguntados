@@ -30,7 +30,7 @@ const quiz1 = [{
 /**
  * Level 2 questions
  */
- const quiz2 = [{
+const quiz2 = [{
     question:"¿De qué país son nativos los canguros?",
     options:["Perú", "Kenia", "Australia", "Irlanda"],
     answer: 2
@@ -59,7 +59,7 @@ const quiz1 = [{
 /**
  * Level 3 questions
  */
- const quiz3 = [{
+const quiz3 = [{
     question:"¿Qué usamos para diluir los colores de las acuarelas?",
     options:["Agua", "Aceite", "Varsol", "Thinner"],
     answer: 0
@@ -88,7 +88,7 @@ const quiz1 = [{
 /**
  * Level 4 questions
  */
- const quiz4 = [{
+const quiz4 = [{
     question:"¿Cuál es el elemento más abundante de la Tierra?",
     options:["Hidrógeno", "Oxigeno", "Helio", "Litio"],
     answer: 0
@@ -117,7 +117,7 @@ const quiz1 = [{
 /**
  * Level 5 questions
  */
- const quiz5 = [{
+const quiz5 = [{
     question:"¿En qué ciudad se entrevistaron Hitler y Franco?",
     options:["Hendaya", "Lyon", "Niza", "Marsella"],
     answer: 0
