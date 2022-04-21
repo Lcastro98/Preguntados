@@ -123,6 +123,7 @@ function quizEnd(){
 	quizBox.classList.add("hide");
 	// Show the results box
 	resultBox.classList.remove("hide");
+	swal("Felicitaciones! ", "Haz ganado el premio mayor"); 
 	quizResult();
 }
 
@@ -142,11 +143,12 @@ function quizResult(){
 }
 
 // BOTON DE RENDIRSE
-function giveUp(){
+function giveUp(){	
 	quizBox.classList.add("hide");
 	resultBox.classList.remove("hide");
 	savePrize();
 	quizResult();
+	swal("ohhh! ", "Rendirse también vale, intenta de nuevo"); 	
 }
 
 function returnToHome(){
@@ -169,12 +171,13 @@ function returnToHome(){
 // FINALIZA EL JUEGO AL DAR CLICK EN LA PREGUNTA ERRONEA
 function gameOver(){
 	if(wrongAnswer === 1){
+		swal("Oops! Pregunta Incorrecta, intenta de nuevo", "error");
 		rightAnswer = 0;
 		quota = 200000;
-		swal("Oops! Pregunta Incorrecta, intenta de nuevo", "error");
-		giveUp();
 		wrongAnswer = 0;
 		questionCounter=0;
+		setTimeout('document.location.reload()',1500);
+		
 	}
 }
 function topFive(){
@@ -272,3 +275,4 @@ function levelUp(){
 			break;
 	}
 }
+
