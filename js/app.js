@@ -86,7 +86,6 @@ function getResult(element){
 		element.classList.add("wrong");
 		updateAnswerIndicator("wrong");
 		wrongAnswer++;
-		// setTimeout('gameOver()',1000);
 	}
 	gameOver();
 	stopClick();	
@@ -126,6 +125,9 @@ function quizEnd(){
 	swal("Felicitaciones! ", "Haz ganado el premio mayor"); 
 	initConfetti();
 	render();
+	setTimeout(function(){
+		canvas.parentNode.removeChild(canvas);
+	},4000);
 	quizResult();
 }
 
@@ -136,7 +138,6 @@ function quizResult(){
 	const profits = rightAnswer * quota;
 	prizes.push(profits);
 	savePrize();
-	//attemps++;
 	resultBox.querySelector(".total-profits").innerHTML = "$ " + profits;
 	resultBox.querySelector(".total-score").innerHTML = rightAnswer + " / " + quiz1.length;
 	level=1;
@@ -155,7 +156,6 @@ function giveUp(){
 
 function returnToHome(){
 	let resetAttemps = attemps;
-	console.log(attemps);
 	if(resetAttemps === 5){
 		attemps=1;
 		names = [];
@@ -246,7 +246,6 @@ function startQuiz(){
 
 // Push the available questions in the array
 function levelUp(){
-	console.log(level);
 	const category = level1.length;
 	availableQuestion = [];
 	switch(level){
@@ -386,9 +385,6 @@ render = () => {
 
   });
 
-  // Fire off another round of confetti
-  //if (confetti.length <= 10) initConfetti();
-
   window.requestAnimationFrame(render);
 
 };
@@ -397,8 +393,3 @@ render = () => {
 window.addEventListener('resize', function () {
   resizeCanvas();
 });
-
-//------------Click------------
-//window.addEventListener('click', function () {
-//  initConfetti();
-//});
