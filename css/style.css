@@ -314,6 +314,6 @@ footer{
 	max-width: 640px;
 	display: block;
 	margin: 0 auto;
-	border: 1px solid #ddd;
+	border: 0;
 	user-select: none;
 }
