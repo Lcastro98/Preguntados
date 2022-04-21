@@ -83,10 +83,9 @@ function getResult(element){
 	else{	
 		//  Change to red the wrong option and put a check mark
 		element.classList.add("wrong");
-		updateanswerIndicator("wrong");
-		wrongAnswer++;
-		level++;
-		levelUp();
+		updateAnswerIndicador("wrong");
+		rightAnswer++;
+		setTimeout('giveUp()',1000);
 	}
 	gameOver();
 	stopClick();	
