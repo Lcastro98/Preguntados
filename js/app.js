@@ -34,11 +34,11 @@ let prizes = [];
 // Questions counter
 function getNewQuestion(){
 	// Question number
-	questionNumber.innerHTML = "Pregunta " + (questionCounter + 1) + " de " + quiz.length;
+	questionNumber.innerHTML = "Pregunta " + (questionCounter + 1) + " de " + quiz1.length;
 	// Get ramdomized question
 	const questionIndex = availableQuestion[Math.floor(Math.random() * availableQuestion.length)]
 	actualQuestion = questionIndex;
-	questionText.innerHTML = actualQuestion.q;
+	questionText.innerHTML = actualQuestion.question;
 	// Get array index position
 	const index1 = availableQuestion.indexOf(questionIndex);
 	// Remove the indes question from the available questions array, the question will not be repeated
@@ -75,7 +75,7 @@ function getResult(element){
 	if(id===actualQuestion.answer){
 		// Change to green the right option and put a check mark
 		element.classList.add("correct");
-		updateanswerIndicator("correct");
+		updateAnswerIndicator("correct");
 		rightAnswer++;
 		level++;
 		levelUp();
@@ -83,8 +83,8 @@ function getResult(element){
 	else{	
 		//  Change to red the wrong option and put a check mark
 		element.classList.add("wrong");
-		updateAnswerIndicador("wrong");
-		rightAnswer++;
+		updateAnswerIndicator("wrong");
+		wrongAnswer++;
 		setTimeout('giveUp()',1000);
 	}
 	gameOver();
@@ -100,7 +100,7 @@ function stopClick(){
 // Answer indicator
 function answerIndicator(){
 	answerContainerIndicator.innerHTML = '';
-	const totalPregunta = quiz.length;
+	const totalPregunta = quiz1.length;
 	for(let i=0;i<totalPregunta;i++){
 		const indicador = document.createElement("div");
 		answerContainerIndicator.appendChild(indicador);
@@ -111,7 +111,7 @@ function updateAnswerIndicator(markType){
 }
 // Next button function 
 function next(){
-	if(questionCounter === quiz.length){
+	if(questionCounter === quiz1.length){
 		quizEnd();
 	} else{	
 		getNewQuestion();
@@ -127,14 +127,14 @@ function quizEnd(){
 
 // Get results
 function quizResult(){
-	resultBox.querySelector(".total-questions").innerHTML = quiz.length;
-	resultBox.querySelector(".total-attemps").innerHTML = attemps;
+	resultBox.querySelector(".total-questions").innerHTML = quiz1.length;
+	resultBox.querySelector(".total-attempts").innerHTML = attemps;
 	const profits = rightAnswer * quota;
 	prizes.push(profits);
 	savePrize();
 	//attemps++;
 	resultBox.querySelector(".total-profits").innerHTML = "$ " + profits;
-	resultBox.querySelector(".total-score").innerHTML = rightAnswer + " / " + quiz.length;
+	resultBox.querySelector(".total-score").innerHTML = rightAnswer + " / " + quiz1.length;
 	level=1;
 	questionCounter=0;
 	wrongAnswer=0;
@@ -147,7 +147,7 @@ function giveUp(){
 	quizResult();
 }
 
-function volverAlInicio(){
+function returnToHome(){
 	let resetAttemps = attemps;
 	console.log(attemps);
 	if(resetAttemps === 5){
@@ -180,19 +180,19 @@ function topFive(){
 function showTop(){
 	switch(attemps){
 		case 1:
-			topUsuarios.innerHTML = names[0];
+			topUsers1.innerHTML = names[0];
 			break;
 		case 2:
-			topUsuarios1.innerHTML = names[1];
+			topUsers2.innerHTML = names[1];
 			break;
 		case 3:
-			topUsuarios2.innerHTML = names[2];
+			topUsers3.innerHTML = names[2];
 			break;
 		case 4:
-			topUsuarios3.innerHTML = names[3];
+			topUsers4.innerHTML = names[3];
 			break;
 		case 5:
-			topUsuarios4.innerHTML = names[4];
+			topUsers5.innerHTML = names[4];
 			break;
 	}
 }
@@ -239,31 +239,31 @@ function startQuiz(){
 function levelUp(){
 	switch(level){
 		case 1:
-			const category1 = quiz.length;
+			const category1 = quiz1.length;
 			for(let i=0;i<category1;i++){
 				availableQuestion.push(level1[i]);
 				}
 			break;
 		case 2:
-			const category2 = quiz.length;
+			const category2 = quiz2.length;
 			for(let i=0;i<category2;i++){
 				availableQuestion.push(level2[i]);
 			}
 			break;
 		case 3:
-			const category3 = quiz.length;
+			const category3 = quiz3.length;
 			for(let i=0;i<category3;i++){
 				availableQuestion.push(level3[i]);
 				}
 			break;
 		case 4:
-			const category4 = quiz.length;
+			const category4 = quiz4.length;
 			for(let i=0;i<category4;i++){
 				availableQuestion.push(level4[i]);
 				}
 			break;
 		case 5:
-			const category5 = quiz.length;
+			const category5 = quiz5.length;
 			for(let i=0;i<category5;i++){
 				availableQuestion.push(level5[i]);
 				}
