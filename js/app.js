@@ -381,9 +381,6 @@ render = () => {
   window.requestAnimationFrame(render);
 };
 
-//---------Execution--------
-
-
 //----------Resize----------
 window.addEventListener('resize', function () {
   resizeCanvas();
