@@ -41,7 +41,7 @@ function getNewQuestion(){
 	questionText.innerHTML = actualQuestion.question;
 	// Get array index position
 	const index1 = availableQuestion.indexOf(questionIndex);
-	// Remove the indes question from the available questions array, the question will not be repeated
+	// Remove the index question from the available questions array, the question will not be repeated
 	availableQuestion.splice(index1,1);
 	const optLen = actualQuestion.options.length
 	// Push the options in the available questions array.
@@ -85,7 +85,7 @@ function getResult(element){
 		element.classList.add("wrong");
 		updateAnswerIndicator("wrong");
 		wrongAnswer++;
-		setTimeout('giveUp()',1000);
+		// setTimeout('gameOver()',1000);
 	}
 	gameOver();
 	stopClick();	
@@ -131,7 +131,7 @@ function quizResult(){
 	resultBox.querySelector(".total-attempts").innerHTML = attemps;
 	const profits = rightAnswer * quota;
 	prizes.push(profits);
-	savePrize();
+	savePrice();
 	//attemps++;
 	resultBox.querySelector(".total-profits").innerHTML = "$ " + profits;
 	resultBox.querySelector(".total-score").innerHTML = rightAnswer + " / " + quiz1.length;
@@ -164,9 +164,9 @@ function returnToHome(){
 	questionCounter = 0;
 	rightAnswer=0;	
 }
-// FINALIZA EL JUEGO AL DAR CLICK EN LA TERCERA PREGUNTA ERRONEA
+// FINALIZA EL JUEGO AL DAR CLICK EN LA PREGUNTA ERRONEA
 function gameOver(){
-	if(wrongAnswer === 3){
+	if(wrongAnswer === 1){
 		quota = 0;
 		giveUp();
 		wrongAnswer = 0;
@@ -197,7 +197,7 @@ function showTop(){
 	}
 }
 
-function savePrize(){
+function savePrice(){
 	switch(attemps){
 		case 1:
 			topPrize1.innerHTML = prizes[0] + " $";
