@@ -309,4 +309,11 @@ footer{
     color: rgb(255, 255, 255);
     text-align: center;
 }
-
+/*Confeti*/
+.confetti{
+	max-width: 640px;
+	display: block;
+	margin: 0 auto;
+	border: 1px solid #ddd;
+	user-select: none;
+}
