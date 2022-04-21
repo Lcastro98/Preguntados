@@ -380,15 +380,11 @@ render = () => {
 
     // Reset transform matrix
     ctx.setTransform(1, 0, 0, 1, 0, 0);
+});
 
-
-  });
-
-  window.requestAnimationFrame(render);
-
+window.requestAnimationFrame(render);
 };
-
 //----------Resize----------
 window.addEventListener('resize', function () {
-  resizeCanvas();
+resizeCanvas();
 });
