@@ -393,9 +393,6 @@ render = () => {
 
 };
 
-//---------Execution--------
-
-
 //----------Resize----------
 window.addEventListener('resize', function () {
   resizeCanvas();
